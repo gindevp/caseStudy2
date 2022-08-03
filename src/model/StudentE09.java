@@ -1,5 +1,7 @@
 package model;
 
+import model.Student;
+
 public class StudentE09 extends Student {
     /**Vẽ*/
     private int art;

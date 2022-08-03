@@ -1,9 +1,8 @@
 package model;
 
-import java.time.LocalDate;
-import java.util.Date;
+import model.Student;
 
-public class StudentC06 extends Student{
+public class StudentC06 extends Student {
     /** Văn*/
     private int literature;
     /**Sinh*/

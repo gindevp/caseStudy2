@@ -1,8 +1,8 @@
 package model;
 
-import java.time.LocalDate;
+import model.Student;
 
-public class StudentA00 extends Student{
+public class StudentA00 extends Student {
     /** Toán*/
     private int math;
     /** Lý*/

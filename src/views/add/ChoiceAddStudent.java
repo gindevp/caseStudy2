@@ -30,7 +30,7 @@ public class ChoiceAddStudent {
             } else if (choice == EXIT) {
                 break;
             } else {
-                System.out.println("Mời nhập lại:");
+                System.err.println("[❌] Lựa chọn không tồn tại, mời bạn nhập lại !!!");
             }
 
 

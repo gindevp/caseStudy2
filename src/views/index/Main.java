@@ -52,7 +52,7 @@ public class Main {
                     DisplayMLStudent.menuStudent();
                     break;
                 default:
-                    System.out.println("Sai lựa chọn rồi mời bạn nhập lại:");
+                    System.err.println("[❌] Lựa chọn không tồn tại, mời bạn nhập lại !!!");
             }
         }
     }

@@ -2,9 +2,6 @@ package views.edit;
 
 import model.StudentA00;
 import model.StudentC06;
-import views.edit.InputEditA00;
-import views.edit.InputEditC06;
-import views.edit.InputEditE09;
 
 import java.util.List;
 import java.util.Scanner;

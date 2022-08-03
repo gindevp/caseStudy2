@@ -3,7 +3,6 @@ package views.edit;
 import controller.StudentManager;
 import model.Student;
 import model.StudentC06;
-import views.add.ChoiceAddStudent;
 
 import java.util.List;
 import java.util.Scanner;
