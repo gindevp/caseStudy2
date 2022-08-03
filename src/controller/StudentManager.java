@@ -6,14 +6,15 @@ import storage.FileWriteRead;
 
 import java.io.FileInputStream;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class  StudentManager implements CRUD, Sevices {
     FileWriteRead fileWriteRead= new FileWriteRead();
     @Override
-    public boolean add(List arr, Object element, String pathFile) {
-        boolean status=arr.add(element);
+    public void add(List arr, Object element, String pathFile) {
+        arr.add(element);
         fileWriteRead.writeFile(arr,pathFile);
-        return status;
     }
 
     @Override
@@ -35,7 +36,9 @@ public class  StudentManager implements CRUD, Sevices {
 
     @Override
     public boolean validate(String regex, String input) {
-        return false;
+        Pattern pattern= Pattern.compile(regex);
+        Matcher matcher= pattern.matcher(input);
+        return matcher.matches();
     }
 
     @Override
