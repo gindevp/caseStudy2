@@ -24,8 +24,8 @@ public class  StudentManager implements CRUD, Sevices {
     }
 
     @Override
-    public void remove(int index, List arr,String pathFile) {
-         arr.remove(index);
+    public void remove(int index, List arr, String pathFile) {
+        arr.remove(index);
         fileWriteRead.writeFile(arr,pathFile);
     }
 

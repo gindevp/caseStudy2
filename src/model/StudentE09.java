@@ -48,7 +48,7 @@ public class StudentE09 extends Student {
 
     @Override
     public String toString() {
-        return "StrudentE09{" +
+        return "StudentE09{" +
                 "studentId='" + getStudentId() + '\'' +
                 ", name='" + getName() + '\'' +
                 ", className='" + getClassName() + '\'' +
