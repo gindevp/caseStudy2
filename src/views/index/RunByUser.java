@@ -10,7 +10,7 @@ import views.edit.EditStudent;
 import java.util.List;
 import java.util.Scanner;
 
-public class Main {
+public class RunByUser {
     static final int CHOICEADD = 1;
     static final int CHOICEEDIT = 2;
     static final int CHOICEREMOVE = 3;
@@ -21,9 +21,9 @@ public class Main {
     static FileWriteRead fileWriteRead = new FileWriteRead();
     static List<Student> studentList = (List<Student>) fileWriteRead.readFile(pathFile);
 
-    public static void main(String[] args) {
+    public static void menuUser() {
         DisplayMLStudent.listStudent(studentList);
-        DisplayMLStudent.menuStudent();
+        DisplayMLStudent.menuUser();
         while (true) {
 
             int choice = scanner.nextInt();
@@ -31,11 +31,11 @@ public class Main {
                 case CHOICEADD:
                     //add
                     ChoiceAddStudent.addStudent(studentList, pathFile);
-                    DisplayMLStudent.menuStudent();
+                    DisplayMLStudent.menuUser();
                     break;
                 case CHOICEEDIT:
                     EditStudent.editStudent(studentList, pathFile);
-                    DisplayMLStudent.menuStudent();
+                    DisplayMLStudent.menuUser();
                     //edit
                     break;
                 case CHOICEREMOVE:
@@ -49,7 +49,7 @@ public class Main {
                 case CHOICESHOW:
                     //detail list
                     DisplayMLStudent.listStudent(studentList);
-                    DisplayMLStudent.menuStudent();
+                    DisplayMLStudent.menuUser();
                     break;
                 default:
                     System.err.println("[❌] Lựa chọn không tồn tại, mời bạn nhập lại !!!");

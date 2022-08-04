@@ -3,9 +3,9 @@ package views.menuAndList;
 import java.util.List;
 
 public class DisplayMLStudent {
-    public static void menuStudent(){
+    public static void menuUser(){
         System.out.println("╔============================================================╗");
-        System.out.println("║              ▂ ▃ ▅ ▆ █ HỆ THỐNG ADMIN █ ▆ ▅ ▃ ▂            ║");
+        System.out.println("║              ▂ ▃ ▅ ▆ █ HỆ THỐNG USER  █ ▆ ▅ ▃ ▂            ║");
         System.out.println("╠============================================================╣");
         System.out.println("║>[1]. Thêm sinh viên                                        ║");
         System.out.println("║>[2]. Sửa sinh viên                                         ║");
@@ -31,5 +31,15 @@ public class DisplayMLStudent {
         System.out.println("║>[0]. Trở lại lựa chọn trước đó            ║");
         System.out.println("╚===========================================╝");
         System.out.println("Mời nhập lựa chọn:");
+    }
+    public static void menuLogin() {
+        System.out.println("╔============================================╗");
+        System.out.println("║   ▂ ▃ ▅ ▆ █  Student Manager  █ ▆ ▅ ▃ ▂    ║");
+        System.out.println("╠============================================╣");
+        System.out.println("║>[1]. Đăng nhập                             ║");
+        System.out.println("║>[2]. Đăng ký tài khoản                     ║");
+        System.out.println("║>[0]. Thoát                                 ║");
+        System.out.println("╚============================================╝");
+        System.out.print("[\uD83D\uDC4B] Nhập lựa chọn: ");
     }
 }

@@ -1,28 +1,40 @@
 package login;
 
+import controller.Manager;
+import model.User;
+import storage.FileWriteRead;
+import views.index.RunByAdminn;
+import views.index.RunByUser;
+import views.menuAndList.DisplayMLStudent;
+
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Login {
     Scanner scanner = new Scanner(System.in);
-
-    public void menuLogin() throws NumberFormatException {
+    static List<User> listUser = new FileWriteRead().readFile("users.dat");
+    public static void main(String[] args) {
+//        List<User> userList= new ArrayList<>();
+//        userList.add(new User("01","123456","Quyết",true));
+//        userList.add(new User("02","123456","ĐẠt",false));
+//        userList.add(new User("03","123456","Huyền",false));
+//        userList.add(new User("04","123456","Minh",false));
+//        new FileWriteRead().writeFile(userList,"users.dat");
+//        System.out.println(new FileWriteRead().readFile("users.dat"));
+        Login login = new Login();
+        login.choiceLogin();
+    }
+    public void choiceLogin() throws NumberFormatException {
         do {
-            System.out.println("╔============================================╗");
-            System.out.println("║   ▂ ▃ ▅ ▆ █  Student Manager  █ ▆ ▅ ▃ ▂    ║");
-            System.out.println("╠============================================╣");
-            System.out.println("║>[1]. Đăng nhập                             ║");
-            System.out.println("║>[2]. Đăng ký tài khoản                     ║");
-            System.out.println("║>[0]. Thoát                                 ║");
-            System.out.println("╚============================================╝");
-            System.out.print("[\uD83D\uDC4B] Nhập lựa chọn: ");
+            DisplayMLStudent.menuLogin();
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
                     loginManager();
                     break;
                 case 2:
-//                    registerAccountUser();
+                    new RegisterUser().registerAccountUser();
                     break;
                 case 0:
                     System.exit(0);
@@ -33,52 +45,27 @@ public class Login {
             }
         } while (true);
     }
-
-    private void loginManager() {
-        try{
+    void loginManager() {
+        try {
             System.out.println("┎──────────────[ĐĂNG NHẬP]──────────────┒");
             System.out.print("┠ ▹ Nhập tài khoản: ");
             String account = scanner.nextLine();
             System.out.print("┠ ▹ Nhập mật khẩu: ");
             String password = scanner.nextLine();
             System.out.println("┖───────────────────────────────────────┚");
-            checkAccount(account,password);
+            checkAccountForRole.checkAccount(account, password);
         } catch (Exception e) {
             e.getMessage();
         }
     }
-    public static void main(String[] args) {
-        Login login = new Login();
-        login.menuLogin();
-    }
-    private void checkAccount(String account, String password) {
+    void loginSystem() {
         try {
-            if (checkAccountAdmin(account,password)){
-                System.out.println("[\uD83D\uDD13] Đặng nhập hệ thống bởi ADMIN thành công !!!");
-                System.out.println("------------------------------------------------------------");
-//                runByAdmin.menuManager();
-            } else if (checkAccountUser(account, password)) {
-                System.out.println("[\uD83D\uDD13] Đăng nhập hệ thống bởi USER thành công !!!");
-                System.out.println("----------------------------------------------------------");
-//                runByUser.displayShop();
-            }else {
-                System.err.println("Tên đăng nhập hoặc mật khẩu không đúng! Mời nhập lại: ");
-                System.out.println("----------------------------------------------------------");
-                System.out.println("----------------------------------------------------------");
-                System.out.println("----------------------------------------------------------");
-                loginManager();
-            }
-        } catch (InputMismatchException e) {
-            e.getMessage();
+            choiceLogin();
+        } catch (Exception e) {
+            System.out.println("[❌] Bạn đã nhập sai dữ liệu! Vui lòng nhập lại!");
+            System.out.println("---------------------------------------------------");
+            loginSystem();
         }
-    }
-
-    private boolean checkAccountUser(String account, String password) {
-return false;
-    }
-
-    private boolean checkAccountAdmin(String account, String password) {
-        return false;
     }
 
 
