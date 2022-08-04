@@ -49,7 +49,6 @@ public class User implements Serializable {
     public void setRole(boolean role) {
         this.role = role;
     }
-
     @Override
     public String toString() {
         return "User{" +

@@ -1,5 +1,7 @@
 package views.menuAndList;
 
+import model.User;
+
 import java.util.List;
 
 public class DisplayML {
@@ -35,9 +37,11 @@ public class DisplayML {
             System.out.println("Index: "+i+" "+studentList.get(i).toString());
         }
     }
-    public static void listUser(List userList) {
+    public static void listUser(List<User> userList) {
+        String role;
         for (int i = 0; i < userList.size(); i++) {
-            System.out.println("Index: "+i+" "+userList.get(i).toString());
+            role=(userList.get(i).isRole()==true)?"Admin":"User";
+            System.out.println("Index: "+i+"  {  userId:  "+userList.get(i).getStaffId()+" , name:   "+userList.get(i).getName()+" , password   "+userList.get(i).getPassWord()+" , role   "+role+"  }");
         }
     }
     public static void menuAdd() {

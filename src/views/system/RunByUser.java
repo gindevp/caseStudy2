@@ -1,4 +1,4 @@
-package views.index;
+package views.system;
 
 import login.Login;
 import model.Student;

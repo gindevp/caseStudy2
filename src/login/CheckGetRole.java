@@ -1,11 +1,12 @@
 package login;
 
 import model.User;
+import storage.FileWriteRead;
 
 import java.util.List;
 
 public class CheckGetRole {
-    List<User> listUser= Login.listUser;
+    List<User> listUser= new FileWriteRead().readFile("src/w_database/users.dat");;
     public int getCheckRole(String account, String password, int checkRole) {
         try {
             for (User x : listUser

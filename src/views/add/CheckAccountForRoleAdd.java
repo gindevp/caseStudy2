@@ -4,7 +4,7 @@ import controller.Manager;
 import login.CheckNameAcount;
 import model.User;
 import storage.FileWriteRead;
-import views.index.RunByAdmin;
+import views.system.RunByAdmin;
 
 import java.util.List;
 

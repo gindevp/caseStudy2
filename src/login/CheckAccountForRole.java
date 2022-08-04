@@ -1,7 +1,7 @@
 package login;
 
-import views.index.RunByAdmin;
-import views.index.RunByUser;
+import views.system.RunByAdmin;
+import views.system.RunByUser;
 
 import java.util.InputMismatchException;
 
