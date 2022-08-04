@@ -1,12 +1,13 @@
-package login;
+package views.add;
+
+import login.IsAccount;
 
 import java.util.Scanner;
 
-public class RegisterUser {
-
-    public void registerAccountUser() {
+public class AddStaff {
+    public void addUser(){
         Scanner scanner= new Scanner(System.in);
-        System.out.println("┎──────────────[ĐĂNG KÝ]──────────────┒");
+        System.out.println("┎──────────[THÊM NHÂN VIÊN]──────────┒");
         System.out.println("[\uD83D\uDD11] Mời bạn nhập thông tin:");
         System.out.println("--------------------------------------");
         System.out.print("┠ ▹ Nhập tài khoản: ");
@@ -15,7 +16,13 @@ public class RegisterUser {
         String password = scanner.nextLine();
         System.out.print("┠ ▹ Nhập tên: ");
         String name = scanner.nextLine();
+        System.out.print("┠ ▹ Nhập vai trò (Admin-User): ");
+        String role = scanner.nextLine();
+        boolean roleReal=false;
+        if(role.equals("Admin")){
+            roleReal=true;
+        }
         System.out.println("┖─────────────────────────────────────┚");
-        new IsAccount().checkAccountUser(account, password, name,false);
+        new CheckAccountForRole().checkAccountUser(account, password, name,roleReal);
     }
 }

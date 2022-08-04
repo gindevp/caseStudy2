@@ -1,5 +1,6 @@
 package views.index;
 
+import login.Login;
 import model.Student;
 import storage.FileWriteRead;
 import views.menuAndList.DisplayMLStudent;
@@ -17,7 +18,7 @@ public class RunByUser {
     static final int CHOICESHOW = 4;
     static final int CHOICEEXIT = 0;
     static Scanner scanner = new Scanner(System.in);
-    static final String pathFile = "students.dat";
+    static final String pathFile = "src/w_database/students.dat";
     static FileWriteRead fileWriteRead = new FileWriteRead();
     static List<Student> studentList = (List<Student>) fileWriteRead.readFile(pathFile);
 
@@ -44,7 +45,7 @@ public class RunByUser {
                     break;
                 case CHOICEEXIT:
                     //exit
-                    System.exit(0);
+                    new Login().choiceLogin();
                     break;
                 case CHOICESHOW:
                     //detail list

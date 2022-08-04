@@ -1,19 +1,15 @@
 package login;
 
-import controller.Manager;
 import model.User;
 import storage.FileWriteRead;
-import views.index.RunByAdminn;
-import views.index.RunByUser;
 import views.menuAndList.DisplayMLStudent;
 
-import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class Login {
     Scanner scanner = new Scanner(System.in);
-    static List<User> listUser = new FileWriteRead().readFile("users.dat");
+    static List<User> listUser = new FileWriteRead().readFile("src/w_database/users.dat");
     public static void main(String[] args) {
 //        List<User> userList= new ArrayList<>();
 //        userList.add(new User("01","123456","Quyết",true));
@@ -53,7 +49,7 @@ public class Login {
             System.out.print("┠ ▹ Nhập mật khẩu: ");
             String password = scanner.nextLine();
             System.out.println("┖───────────────────────────────────────┚");
-            checkAccountForRole.checkAccount(account, password);
+            CheckAccountForRole.checkAccount(account, password);
         } catch (Exception e) {
             e.getMessage();
         }

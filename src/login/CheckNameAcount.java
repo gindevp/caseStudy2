@@ -4,7 +4,7 @@ import model.User;
 
 import java.util.List;
 
-public class checkNameAcount {
+public class CheckNameAcount {
     List<User> listUser= Login.listUser;
     public boolean checkNameAccount(String accountUser) {
         for (User account : listUser) {

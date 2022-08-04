@@ -1,19 +1,19 @@
 package login;
 
-import views.index.RunByAdminn;
+import views.index.RunByAdmin;
 import views.index.RunByUser;
 
 import java.util.InputMismatchException;
 
-public class checkAccountForRole{
+public class CheckAccountForRole {
     static void checkAccount(String account, String password) {
         int checkRole = 0;
-        checkRole = new checkGetRole().getCheckRole(account, password, checkRole);
+        checkRole = new CheckGetRole().getCheckRole(account, password, checkRole);
         try {
             if (checkRole == 1) {
                 System.out.println("[\uD83D\uDD13] Đặng nhập hệ thống bởi ADMIN thành công !!!");
                 System.out.println("------------------------------------------------------------");
-                RunByAdminn.menuAdmin();
+                RunByAdmin.choiceUserOrStudent();
             } else if (checkRole == 2) {
                 System.out.println("[\uD83D\uDD13] Đăng nhập hệ thống bởi USER thành công !!!");
                 System.out.println("----------------------------------------------------------");

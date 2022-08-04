@@ -4,7 +4,7 @@ import model.User;
 
 import java.util.List;
 
-public class checkGetRole {
+public class CheckGetRole {
     List<User> listUser= Login.listUser;
     public int getCheckRole(String account, String password, int checkRole) {
         try {
