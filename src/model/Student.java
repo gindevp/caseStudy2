@@ -3,8 +3,9 @@ package model;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.List;
 
-public class Student implements Serializable {
+public abstract class Student implements Serializable{
     private String studentId;
     private String name;
     private String className;
@@ -98,7 +99,7 @@ public class Student implements Serializable {
         else sex = "Nữ";
         return sex;
     }
-
+public abstract String classification(int subject,int subject0, int subject2);
     @Override
     public String toString() {
         return "Student{" +

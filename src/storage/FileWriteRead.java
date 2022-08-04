@@ -1,10 +1,8 @@
 package storage;
 
-import controller.StudentManager;
 import model.*;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.List;
 
 public class FileWriteRead implements IOUploadFile {
@@ -42,7 +40,7 @@ public class FileWriteRead implements IOUploadFile {
     }
 
 
-    public static void main(String[] args) {
+//    public static void main(String[] args) {
 //                 FileWriteRead fileWriteRead= new FileWriteRead();
 //         List <Student> students= (List<Student>) fileWriteRead.readFile("students.dat");
 //                  List<Student> students= new ArrayList<>();
@@ -67,7 +65,7 @@ public class FileWriteRead implements IOUploadFile {
 //                fileWriteRead.writeFile(students,"students.dat");
 //                students= (List<Student>) fileWriteRead.readFile("students.dat");
 //                System.out.println(students);
-    }
+//    }
 
 
 }

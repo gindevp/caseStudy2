@@ -18,7 +18,7 @@ public class DisplayMLStudent {
     }
     public static void listStudent(List studentList) {
         for (int i = 0; i < studentList.size(); i++) {
-            System.out.println("Index: "+i+" "+studentList.get(i));
+            System.out.println("Index: "+i+" "+studentList.get(i).toString());
         }
     }
     public static void menuAdd() {

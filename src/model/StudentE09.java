@@ -16,7 +16,25 @@ public class StudentE09 extends Student {
     public StudentE09(String studentId, String name, String className, int age, boolean sex, String birthDate, String phone, String note) {
         super(studentId, name, className, age, sex, birthDate, phone, note);
     }
+    @Override
+    public String classification(int sub,int sub0,int sub1) {
+        int sum=sub*3+sub0*3+sub1*4;
+        if(sum>=90){
+            return "Xuất sắc";
 
+        }else if(sum>=80){
+            return  "Giỏi";
+        }
+        else if (sum>=75) {
+            return "tiên tiến";
+        } else if (sum>=50) {
+            return "trung bình";
+        }else if(sum>=30){
+            return "khá";
+        }else {
+            return "kém";
+        }
+    }
     public StudentE09(String studentId, String name, String className, int age, boolean sex, String birthDate, String phone, String note, int art, int geography, int history) {
         super(studentId, name, className, age, sex, birthDate, phone, note);
         this.art = art;
@@ -62,6 +80,7 @@ public class StudentE09 extends Student {
                 ", art='" + art + '\'' +
                 ", geography='" + geography + '\'' +
                 ", history='" + history + '\'' +
+                "classification='" + classification(art,geography,history) + '\'' +
                 '}'+"\n";
     }
 }

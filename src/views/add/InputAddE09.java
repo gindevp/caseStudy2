@@ -1,6 +1,6 @@
 package views.add;
 
-import controller.StudentManager;
+import controller.Manager;
 import model.Student;
 import model.StudentE09;
 
@@ -38,7 +38,7 @@ public class InputAddE09 {
         System.out.println("Mời nhập điểm Sử(0->10):");
         int hoa= scanner.nextInt();
         Student students= new StudentE09(id,name,className,age,sexReal,date,phone,note,toan,ly,hoa);
-        new StudentManager().add(studentList,students, pathFile);
+        new Manager().add(studentList,students, pathFile);
         System.out.println("Thêm thành công");
     }
 }

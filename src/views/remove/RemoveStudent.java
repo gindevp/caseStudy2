@@ -1,6 +1,6 @@
 package views.remove;
 
-import controller.StudentManager;
+import controller.Manager;
 
 import java.util.List;
 import java.util.Scanner;
@@ -10,7 +10,7 @@ public class RemoveStudent {
         System.out.println("Mời nhập index của sinh viên cần xóa:");
         Scanner scanner= new Scanner(System.in);
         int index= scanner.nextInt();
-        new StudentManager().remove(index,studentList,pathFile);
+        new Manager().remove(index,studentList,pathFile);
         System.out.println("Xóa thành công");
     }
 }
