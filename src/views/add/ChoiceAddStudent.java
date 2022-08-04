@@ -1,6 +1,6 @@
 package views.add;
 
-import views.menuAndList.DisplayMLStudent;
+import views.menuAndList.DisplayML;
 
 import java.util.List;
 import java.util.Scanner;
@@ -14,7 +14,7 @@ public class ChoiceAddStudent {
     private static Scanner scanner = new Scanner(System.in);
 
     public static void addStudent(List studentList, String pathFile) {
-        DisplayMLStudent.menuAdd();
+        DisplayML.menuAdd();
         while (true) {
             int choice = scanner.nextInt();
             if (choice == A00) {

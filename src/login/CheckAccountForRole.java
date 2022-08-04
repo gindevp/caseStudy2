@@ -11,7 +11,7 @@ public class CheckAccountForRole {
         checkRole = new CheckGetRole().getCheckRole(account, password, checkRole);
         try {
             if (checkRole == 1) {
-                System.out.println("[\uD83D\uDD13] Đặng nhập hệ thống bởi ADMIN thành công !!!");
+                System.out.println("[\uD83D\uDD13] Đăng nhập hệ thống bởi ADMIN thành công !!!");
                 System.out.println("------------------------------------------------------------");
                 RunByAdmin.choiceUserOrStudent();
             } else if (checkRole == 2) {

@@ -2,7 +2,7 @@ package login;
 
 import model.User;
 import storage.FileWriteRead;
-import views.menuAndList.DisplayMLStudent;
+import views.menuAndList.DisplayML;
 
 import java.util.List;
 import java.util.Scanner;
@@ -23,7 +23,7 @@ public class Login {
     }
     public void choiceLogin() throws NumberFormatException {
         do {
-            DisplayMLStudent.menuLogin();
+            DisplayML.menuLogin();
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:

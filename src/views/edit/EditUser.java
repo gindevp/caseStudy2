@@ -3,18 +3,17 @@ package views.edit;
 import controller.UserService;
 import model.User;
 import storage.FileWriteRead;
-import views.add.CheckAccountForRoleAdd;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class EditStaff {
+public class EditUser {
     static final String pathFile="src/w_database/users.dat";
     List<User> listUser= new FileWriteRead().readFile(pathFile);
     public void editUser() {
         Scanner scanner= new Scanner(System.in);
         System.out.println("┎───────────────────[SỬA NHÂN VIÊN]─────────────────┒");
-        System.out.println("[\uD83D\uDD11] Mời bạn nhập id nhân viên cần sửa:");
+        System.out.println("[\uD83D\uDD11] Mời bạn nhập mã nhân viên cần sửa:");
         System.out.println("-----------------------------------------------------");
         String id = scanner.nextLine();
         int indexRemove=new UserService().checkIndex(listUser,id);

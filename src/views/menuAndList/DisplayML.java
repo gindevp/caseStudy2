@@ -2,7 +2,7 @@ package views.menuAndList;
 
 import java.util.List;
 
-public class DisplayMLStudent {
+public class DisplayML {
     public static void menuAdmin(){
         System.out.println("╔============================================================╗");
         System.out.println("║              ▂ ▃ ▅ ▆ █ HỆ THỐNG ADMIN  █ ▆ ▅ ▃ ▂           ║");
@@ -35,6 +35,11 @@ public class DisplayMLStudent {
             System.out.println("Index: "+i+" "+studentList.get(i).toString());
         }
     }
+    public static void listUser(List userList) {
+        for (int i = 0; i < userList.size(); i++) {
+            System.out.println("Index: "+i+" "+userList.get(i).toString());
+        }
+    }
     public static void menuAdd() {
         System.out.println("╔===========================================╗");
         System.out.println("║     ▂ ▃ ▅ ▆ █ THÊM SẢN PHẨM  █ ▆ ▅ ▃ ▂    ║");
@@ -56,4 +61,5 @@ public class DisplayMLStudent {
         System.out.println("╚============================================╝");
         System.out.print("[\uD83D\uDC4B] Nhập lựa chọn: ");
     }
+
 }

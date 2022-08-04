@@ -2,11 +2,12 @@ package views.index;
 
 import login.Login;
 import model.Student;
+import model.User;
 import storage.FileWriteRead;
-import views.add.AddStaff;
-import views.edit.EditStaff;
-import views.menuAndList.DisplayMLStudent;
-import views.remove.RemoveStaff;
+import views.add.AddUser;
+import views.edit.EditUser;
+import views.menuAndList.DisplayML;
+import views.remove.RemoveUser;
 import views.remove.RemoveStudent;
 import views.add.ChoiceAddStudent;
 import views.edit.EditStudent;
@@ -20,10 +21,13 @@ public class RunByAdmin{
     static final int CHOICEREMOVE = 3;
     static final int CHOICESHOW = 4;
     static final int CHOICEEXIT = 0;
+    static final int CHOICEUSER = 6;
     static Scanner scanner = new Scanner(System.in);
-    static final String pathFile = "src/w_database/students.dat";
+    static final String pathFileStudent = "src/w_database/students.dat";
+    static final String pathFileUser = "src/w_database/users.dat";
     static FileWriteRead fileWriteRead = new FileWriteRead();
-    static List<Student> studentList = (List<Student>) fileWriteRead.readFile(pathFile);
+    static List<Student> studentList = (List<Student>) fileWriteRead.readFile(pathFileStudent);
+    static List<User> userList= fileWriteRead.readFile(pathFileUser);
     public  static void choiceUserOrStudent(){
         System.out.println("╔============================================================╗");
         System.out.println("║             ▂ ▃ ▅ ▆ █ HỆ THỐNG ADMIN  █ ▆ ▅ ▃ ▂            ║");
@@ -55,6 +59,7 @@ public class RunByAdmin{
     }
 
     public static void menuStaffManager() {
+        DisplayML.listUser(userList);
         System.out.println("╔============================================================╗");
         System.out.println("║             ▂ ▃ ▅ ▆ █ HỆ THỐNG ADMIN  █ ▆ ▅ ▃ ▂            ║");
         System.out.println("╠============================================================╣");
@@ -69,15 +74,15 @@ public class RunByAdmin{
             switch (choice) {
                 case 1:
                     //add
-                    new AddStaff().addUser();
+                    new AddUser().addUser();
                     break;
                 case 2:
-                    new EditStaff().editUser();
+                    new EditUser().editUser();
                     //edit
                     break;
                 case 3:
                     //remove
-                    new RemoveStaff().removeUser();
+                    new RemoveUser().removeUser();
                     break;
                 case CHOICEEXIT:
                     //exit
@@ -85,7 +90,7 @@ public class RunByAdmin{
                     break;
                 case CHOICESHOW:
                     //detail list
-
+                    DisplayML.listUser(userList);
                     break;
                 default:
                     System.err.println("[❌] Lựa chọn không tồn tại, mời bạn nhập lại !!!");
@@ -94,24 +99,24 @@ public class RunByAdmin{
     }
 
     public static void menuAdmin() {
-        DisplayMLStudent.listStudent(studentList);
-        DisplayMLStudent.menuAdmin();
+        DisplayML.listStudent(studentList);
+        DisplayML.menuAdmin();
         while (true) {
             int choice = scanner.nextInt();
             switch (choice) {
                 case CHOICEADD:
                     //add
-                    ChoiceAddStudent.addStudent(studentList, pathFile);
-                    DisplayMLStudent.menuUser();
+                    ChoiceAddStudent.addStudent(studentList, pathFileStudent);
+                    DisplayML.menuUser();
                     break;
                 case CHOICEEDIT:
-                    EditStudent.editStudent(studentList, pathFile);
-                    DisplayMLStudent.menuUser();
+                    EditStudent.editStudent(studentList, pathFileStudent);
+                    DisplayML.menuUser();
                     //edit
                     break;
                 case CHOICEREMOVE:
                     //remove
-                    RemoveStudent.choiceRemove(studentList, pathFile);
+                    RemoveStudent.choiceRemove(studentList, pathFileStudent);
                     break;
                 case CHOICEEXIT:
                     //exit
@@ -119,8 +124,11 @@ public class RunByAdmin{
                     break;
                 case CHOICESHOW:
                     //detail list
-                    DisplayMLStudent.listStudent(studentList);
-                    DisplayMLStudent.menuUser();
+                    DisplayML.listStudent(studentList);
+                    DisplayML.menuUser();
+                    break;
+                case CHOICEUSER:
+                    menuStaffManager();
                     break;
                 default:
                     System.err.println("[❌] Lựa chọn không tồn tại, mời bạn nhập lại !!!");

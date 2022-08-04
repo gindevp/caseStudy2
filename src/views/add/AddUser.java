@@ -2,7 +2,7 @@ package views.add;
 
 import java.util.Scanner;
 
-public class AddStaff {
+public class AddUser {
     public void addUser(){
         Scanner scanner= new Scanner(System.in);
         System.out.println("┎──────────[THÊM NHÂN VIÊN]──────────┒");

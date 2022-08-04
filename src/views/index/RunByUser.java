@@ -3,7 +3,7 @@ package views.index;
 import login.Login;
 import model.Student;
 import storage.FileWriteRead;
-import views.menuAndList.DisplayMLStudent;
+import views.menuAndList.DisplayML;
 import views.remove.RemoveStudent;
 import views.add.ChoiceAddStudent;
 import views.edit.EditStudent;
@@ -23,8 +23,8 @@ public class RunByUser {
     static List<Student> studentList = (List<Student>) fileWriteRead.readFile(pathFile);
 
     public static void menuUser() {
-        DisplayMLStudent.listStudent(studentList);
-        DisplayMLStudent.menuUser();
+        DisplayML.listStudent(studentList);
+        DisplayML.menuUser();
         while (true) {
 
             int choice = scanner.nextInt();
@@ -32,11 +32,11 @@ public class RunByUser {
                 case CHOICEADD:
                     //add
                     ChoiceAddStudent.addStudent(studentList, pathFile);
-                    DisplayMLStudent.menuUser();
+                    DisplayML.menuUser();
                     break;
                 case CHOICEEDIT:
                     EditStudent.editStudent(studentList, pathFile);
-                    DisplayMLStudent.menuUser();
+                    DisplayML.menuUser();
                     //edit
                     break;
                 case CHOICEREMOVE:
@@ -49,8 +49,8 @@ public class RunByUser {
                     break;
                 case CHOICESHOW:
                     //detail list
-                    DisplayMLStudent.listStudent(studentList);
-                    DisplayMLStudent.menuUser();
+                    DisplayML.listStudent(studentList);
+                    DisplayML.menuUser();
                     break;
                 default:
                     System.err.println("[❌] Lựa chọn không tồn tại, mời bạn nhập lại !!!");
