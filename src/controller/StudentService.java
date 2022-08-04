@@ -1,19 +1,19 @@
 package controller;
 
-import model.Sevices;
+import model.Services;
 import model.Student;
 
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class StudentService implements Sevices {
+public class StudentService implements Services {
     @Override
     public int checkIndex(List arr, String studentID) {
         List<Student> student= (List<Student>) arr;
         int index=0;
         for (int i = 0; i < arr.size(); i++) {
-            if(student.equals(student.get(i).getStudentId())){
+            if(studentID.equals(student.get(i).getStudentId())){
                 index=i;
             }
         }

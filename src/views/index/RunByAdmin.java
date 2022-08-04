@@ -3,7 +3,10 @@ package views.index;
 import login.Login;
 import model.Student;
 import storage.FileWriteRead;
+import views.add.AddStaff;
+import views.edit.EditStaff;
 import views.menuAndList.DisplayMLStudent;
+import views.remove.RemoveStaff;
 import views.remove.RemoveStudent;
 import views.add.ChoiceAddStudent;
 import views.edit.EditStudent;
@@ -66,15 +69,15 @@ public class RunByAdmin{
             switch (choice) {
                 case 1:
                     //add
-
+                    new AddStaff().addUser();
                     break;
                 case 2:
-
+                    new EditStaff().editUser();
                     //edit
                     break;
                 case 3:
                     //remove
-
+                    new RemoveStaff().removeUser();
                     break;
                 case CHOICEEXIT:
                     //exit

@@ -1,7 +1,5 @@
 package views.add;
 
-import login.IsAccount;
-
 import java.util.Scanner;
 
 public class AddStaff {
@@ -23,6 +21,6 @@ public class AddStaff {
             roleReal=true;
         }
         System.out.println("┖─────────────────────────────────────┚");
-        new CheckAccountForRole().checkAccountUser(account, password, name,roleReal);
+        new CheckAccountForRoleAdd().checkAccountUser(account, password, name,roleReal);
     }
 }

@@ -1,12 +1,9 @@
 package controller;
 
 import model.CRUD;
-import model.Sevices;
 import storage.FileWriteRead;
 
 import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class Manager implements CRUD{
     FileWriteRead fileWriteRead= new FileWriteRead();
