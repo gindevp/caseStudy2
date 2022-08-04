@@ -7,4 +7,5 @@ public interface Services<E> {
     E search(List<E> arr,String element );
     boolean validate(String regex,String input);
 
+
 }

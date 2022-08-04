@@ -2,6 +2,7 @@ package controller;
 
 import model.Services;
 import model.Student;
+import model.User;
 
 import java.util.List;
 import java.util.regex.Matcher;
@@ -21,8 +22,15 @@ public class StudentService implements Services {
     }
 
     @Override
-    public Object search(List arr,String studentId) {
-        return arr.get(checkIndex(arr,studentId));
+    public Student search(List arr,String name) {
+        List<Student> userList= arr;
+        int index=0;
+        for (int i = 0; i < arr.size(); i++) {
+            if(name.equals(userList.get(i).getName())){
+                index=i;
+            }
+        }
+        return userList.get(index);
     }
 
     @Override

@@ -22,8 +22,15 @@ public class UserService implements Services {
     }
 
     @Override
-    public Object search(List arr, String userId) {
-        return arr.get(checkIndex(arr,userId));
+    public User search(List arr, String name) {
+        List<User> userList= arr;
+        int index=0;
+        for (int i = 0; i < arr.size(); i++) {
+            if(name.equals(userList.get(i).getName())){
+                index=i;
+            }
+        }
+        return userList.get(index);
     }
 
     @Override
