@@ -10,7 +10,7 @@ import storage.FileWriteRead;
 import views.menuAndList.DisplayML;
 import views.remove.RemoveStudent;
 import views.add.ChoiceAddStudent;
-import views.edit.EditStudent;
+import views.edit.CheckInstanceStudentEdit;
 
 import java.util.List;
 import java.util.Scanner;
@@ -41,7 +41,7 @@ public class RunByUser {
                     DisplayML.menuUser();
                     break;
                 case CHOICEEDIT:
-                    EditStudent.editStudent(studentList, pathFile);
+                    CheckInstanceStudentEdit.checkInsStudentEit(studentList, pathFile);
                     DisplayML.menuUser();
                     //edit
                     break;

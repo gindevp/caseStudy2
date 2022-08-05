@@ -1,6 +1,7 @@
 package views.edit;
 
 import controller.Manager;
+import controller.UserService;
 import model.Student;
 import model.StudentE09;
 
@@ -26,7 +27,12 @@ public class InputEditE09 {
         System.out.println("Mời nhập ngày tháng năm sinh của sinh viên(yyyy-mm-dd):");
         String date = scanner1.nextLine();
         System.out.println("Mời nhập số điện thoại của sinh viên:");
-        String phone= scanner1.nextLine();
+        String phone;
+        boolean regex;
+        do {
+            phone= scanner1.nextLine();
+            regex= new UserService().validate("^[0-9]{10}$",phone);
+        }while (!regex);
         System.out.println("Mời nhập ghi chú cho sinh viên:");
         String note= scanner1.nextLine();
 

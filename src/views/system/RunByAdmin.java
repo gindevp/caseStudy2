@@ -11,7 +11,7 @@ import views.menuAndList.DisplayML;
 import views.remove.RemoveUser;
 import views.remove.RemoveStudent;
 import views.add.ChoiceAddStudent;
-import views.edit.EditStudent;
+import views.edit.CheckInstanceStudentEdit;
 
 import java.util.List;
 import java.util.Scanner;
@@ -142,7 +142,7 @@ public class RunByAdmin{
                     DisplayML.menuAdmin();
                     break;
                 case CHOICEEDIT:
-                    EditStudent.editStudent(studentList, pathFileStudent);
+                    CheckInstanceStudentEdit.checkInsStudentEit(studentList, pathFileStudent);
                     DisplayML.menuAdmin();
                     //edit
                     break;

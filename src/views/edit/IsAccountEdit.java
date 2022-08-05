@@ -8,7 +8,7 @@ import views.system.RunByAdmin;
 
 import java.util.List;
 
-public class CheckAccountForRoleEdit {
+public class IsAccountEdit {
     static final String pathFile="src/w_database/users.dat";
     List<User> listUser= new FileWriteRead().readFile(pathFile);
     public void checkAccountUser(int index,String account, String password, String name, boolean role) {

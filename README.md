@@ -6,7 +6,7 @@
 * Về việc lên kế hoạch sử dụng trello để quản lý thời gian, vẽ sơ đồ UML, đặc tả, flowchart, luồng thực thi...
 * Các chức năng chính của sản phẩm :
   * Thêm sinh viên, giảng viên(user,admin).
-  * Sửa sinh viên, giảng viên(user)
+  * Sửa sinh viên, giảng viên(user) 
   * Xóa sinh viên, giảng viên(user)
   * Tìm kiếm sinh viên, giảng viên(user)
   * Tính điểm trung bình toàn khối

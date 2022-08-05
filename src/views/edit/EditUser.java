@@ -32,6 +32,6 @@ public class EditUser {
             roleReal=true;
         }
         System.out.println("┖────────────────────────────────────────────────────┚");
-        new CheckAccountForRoleEdit().checkAccountUser(indexRemove,account, password, name,roleReal);
+        new IsAccountEdit().checkAccountUser(indexRemove,account, password, name,roleReal);
     }
 }

@@ -21,6 +21,6 @@ public class AddUser {
             roleReal=true;
         }
         System.out.println("┖─────────────────────────────────────┚");
-        new CheckAccountForRoleAdd().checkAccountUser(account, password, name,roleReal);
+        new IsAccountAdd().checkAccountUser(account, password, name,roleReal);
     }
 }

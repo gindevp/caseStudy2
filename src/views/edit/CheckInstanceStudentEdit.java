@@ -6,9 +6,9 @@ import model.StudentC06;
 import java.util.List;
 import java.util.Scanner;
 
-public class EditStudent {
+public class CheckInstanceStudentEdit {
     static Scanner scanner= new Scanner(System.in);
-    public static void editStudent(List studentList, String pathFile) {
+    public static void checkInsStudentEit(List studentList, String pathFile) {
         System.out.println("Mời nhập index của sinh viên cần sửa:");
         int index= scanner.nextInt();
         if(studentList.get(index) instanceof StudentA00){
