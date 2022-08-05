@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
-public class Student implements Serializable{
+public abstract class Student implements Serializable{
     private String studentId;
     private String name;
     private String className;
@@ -99,7 +99,8 @@ public class Student implements Serializable{
         else sex = "Nữ";
         return sex;
     }
-
+    public abstract String classification();
+    public abstract double avg();
     @Override
     public String toString() {
         return "Student{" +

@@ -43,7 +43,7 @@ public class DisplayML {
         String role;
         for (int i = 0; i < userList.size(); i++) {
             role=(userList.get(i).isRole()==true)?"Admin":"User";
-            System.out.println("Index: "+i+"  {  userId:  "+userList.get(i).getStaffId()+" , name:   "+userList.get(i).getName()+" , password:   "+userList.get(i).getPassWord()+" , role:   "+role+"  }");
+            System.out.println("Index: "+i+"  {  userId:  "+userList.get(i).getUserId()+" , name:   "+userList.get(i).getName()+" , password:   "+userList.get(i).getPassWord()+" , role:   "+role+"  }");
         }
     }
     public static void menuAdd() {

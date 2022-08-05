@@ -1,6 +1,6 @@
 package views.edit;
 
-import controller.Manager;
+import controller.CRUD;
 import controller.UserService;
 import model.Student;
 import model.StudentE09;
@@ -43,7 +43,7 @@ public class InputEditE09 {
         System.out.println("Mời nhập điểm Anh(0->10):");
         int hoa= scanner.nextInt();
         Student students= new StudentE09(id,name,className,age,sexReal,date,phone,note,toan,ly,hoa);
-        new Manager().edit(index,studentList,students, partFile);
+        new CRUD().edit(index,studentList,students, partFile);
         System.out.println("Sửa thành công");
     }
 }

@@ -17,6 +17,32 @@ public class StudentC06 extends Student {
         super(studentId, name, className, age, sex, birthDate, phone, note);
     }
 
+    @Override
+    public String classification() {
+        int sum=literature*3+disciple*4+english*3;
+        if(sum>=90){
+            return "Xuất sắc";
+
+        }else if(sum>=80){
+            return  "Giỏi";
+        }
+        else if (sum>=75) {
+            return "tiên tiến";
+        } else if (sum>=50) {
+            return "trung bình";
+        }else if(sum>=30){
+            return "khá";
+        }else {
+            return "kém";
+        }
+    }
+
+    @Override
+    public double avg() {
+        int sum=this.getLiterature()*4+this.getDisciple()*3+this.getEnglish()*3;
+        return sum/10;
+    }
+
     public StudentC06(String studentId, String name, String className, int age, boolean sex, String birthDate, String phone, String note, int literature, int disciple, int english) {
         super(studentId, name, className, age, sex, birthDate, phone, note);
         this.literature = literature;
@@ -62,6 +88,7 @@ public class StudentC06 extends Student {
                 ", literature='" + literature + '\'' +
                 ", disciple='" + disciple + '\'' +
                 ", english='" + english + '\'' +
+                ", classification='" + classification() + '\'' +
                 '}'+"\n";
     }
 }

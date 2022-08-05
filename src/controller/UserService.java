@@ -1,7 +1,6 @@
 package controller;
 
 import model.Services;
-import model.Student;
 import model.User;
 
 import java.util.List;
@@ -14,7 +13,7 @@ public class UserService implements Services {
         List<User> userList= (List<User>) arr;
         int index=0;
         for (int i = 0; i < arr.size(); i++) {
-            if(userID.equals(userList.get(i).getStaffId())){
+            if(userID.equals(userList.get(i).getUserId())){
                 index=i;
             }
         }

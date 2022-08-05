@@ -60,7 +60,7 @@ public class RunByUser {
                     break;
                 case CHOICEAVG:
 
-                    System.out.println("Điểm trung bình: "+sum());
+                    System.out.println("Điểm trung bình: "+ avg());
                     break;
                 case CHOICESEARCH:
                     System.out.println("Mời nhập tên sinh viên cần tìm: ");
@@ -75,36 +75,32 @@ public class RunByUser {
         }
     }
 
-    private static double sum() {
-        int sum=0;
+    private static double avg() {
         double avg=0;
         int count=0;
         for (Student x: studentList
-             ) {
+        ) {
             if(x instanceof StudentA00){
-            StudentA00 y=(StudentA00) x;
-           sum = y.getChemistry()+y.getMath()+y.getPhysics();
-           avg+= sum/3;
-           count++;
+                StudentA00 y=(StudentA00) x;
+                avg+=y.avg();
+                count++;
             }
         }
         for (Student x: studentList
         ) {
             if(x instanceof StudentC06){
-            StudentC06 y=(StudentC06) x;
-            sum = y.getDisciple()+y.getEnglish()+y.getLiterature();
-                avg+= sum/3;
-            count++;}
+                StudentC06 y=(StudentC06) x;
+                avg += y.avg();
+                count++;}
         }
         for (Student x: studentList
         ) {
             if(x instanceof StudentE09){
-            StudentE09 y=(StudentE09) x;
-            sum = y.getArt()+y.getGeography()+y.getHistory();
-            avg+= sum/3;
-            count++;}
+                StudentE09 y=(StudentE09) x;
+                avg+= y.avg();
+                count++;}
         }
         avg=avg/count;
-       return avg;
+        return avg;
     }
 }

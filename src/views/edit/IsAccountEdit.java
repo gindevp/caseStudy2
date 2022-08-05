@@ -1,6 +1,6 @@
 package views.edit;
 
-import controller.Manager;
+import controller.CRUD;
 import login.CheckNameAcount;
 import model.User;
 import storage.FileWriteRead;
@@ -16,7 +16,7 @@ public class IsAccountEdit {
             System.err.println("[❌] Tài khoản đã tồn tại. Vui lòng sửa lại !!!");
             System.out.println("---------------------------------------");
         } else {
-            new Manager().edit(index,listUser,new User(account,password,name,role),pathFile);
+            new CRUD().edit(index,listUser,new User(account,password,name,role),pathFile);
             System.out.println("[\uD83D\uDC4C] Xóa thành công");
             System.out.println("----------------------------------------");
             System.out.println();

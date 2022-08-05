@@ -11,7 +11,7 @@ public class CheckGetRole {
         try {
             for (User x : listUser
             ) {
-                if (account.equals(x.getStaffId()) && password.equals(x.getPassWord())) {
+                if (account.equals(x.getUserId()) && password.equals(x.getPassWord())) {
                     if (x.isRole()) checkRole = 1;
                     else checkRole = 2;
                 }

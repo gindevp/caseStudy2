@@ -1,11 +1,10 @@
 package controller;
 
-import model.CRUD;
 import storage.FileWriteRead;
 
 import java.util.List;
 
-public class Manager implements CRUD{
+public class CRUD implements model.CRUD {
     FileWriteRead fileWriteRead= new FileWriteRead();
     @Override
     public void add(List arr, Object element, String pathFile) {
@@ -24,4 +23,5 @@ public class Manager implements CRUD{
         arr.remove(index);
         fileWriteRead.writeFile(arr,pathFile);
     }
+
 }

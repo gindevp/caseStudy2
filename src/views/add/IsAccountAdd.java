@@ -1,6 +1,6 @@
 package views.add;
 
-import controller.Manager;
+import controller.CRUD;
 import login.CheckNameAcount;
 import model.User;
 import storage.FileWriteRead;
@@ -17,7 +17,7 @@ public class IsAccountAdd {
             System.err.println("[❌] Tài khoản đã tồn tại. Vui lòng thêm lại !!!");
             System.out.println("---------------------------------------");
         } else {
-            new Manager().add(listUser,new User(account,password,name,role),pathFile);
+            new CRUD().add(listUser,new User(account,password,name,role),pathFile);
             System.out.println("[\uD83D\uDC4C] Thêm thành công");
             System.out.println("----------------------------------------");
             System.out.println();

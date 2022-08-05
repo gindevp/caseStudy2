@@ -17,6 +17,31 @@ public class StudentA00 extends Student {
         super(studentId, name, className, age, sex, birthDate, phone, note);
     }
 
+    @Override
+    public String classification() {
+        int sum=math*4+physics*3+chemistry*3;
+        if(sum>=90){
+            return "Xuất sắc";
+
+        }else if(sum>=80){
+            return  "Giỏi";
+        }
+        else if (sum>=75) {
+            return "tiên tiến";
+        } else if (sum>=50) {
+            return "trung bình";
+        }else if(sum>=30){
+            return "khá";
+        }else {
+            return "kém";
+        }
+    }
+
+    @Override
+    public double avg() {
+        int sum=this.getMath()*4+this.getPhysics()*3+this.getChemistry()*3;
+        return sum/10;
+    }
 
 
     public StudentA00(String studentId, String name, String className, int age, boolean sex, String birthDate, String phone, String note, int math, int physics, int chemistry) {
@@ -64,6 +89,7 @@ public class StudentA00 extends Student {
                 ", math='" + math + '\'' +
                 ", physics='" + physics + '\'' +
                 ", chemistry='" + chemistry + '\'' +
+                ", classification='" + classification() + '\'' +
                 '}'+"\n";
     }
 }

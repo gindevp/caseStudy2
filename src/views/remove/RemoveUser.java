@@ -1,6 +1,6 @@
 package views.remove;
 
-import controller.Manager;
+import controller.CRUD;
 import controller.UserService;
 import model.User;
 import storage.FileWriteRead;
@@ -18,7 +18,7 @@ public class RemoveUser {
         System.out.println("-----------------------------------------------------");
         String id = scanner.nextLine();
         int indexRemove=new UserService().checkIndex(listUser,id);
-        new Manager().remove(indexRemove,listUser,pathFile);
+        new CRUD().remove(indexRemove,listUser,pathFile);
         System.out.println("Xóa Thành Công");
     }
 }

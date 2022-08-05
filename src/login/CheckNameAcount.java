@@ -9,7 +9,7 @@ public class CheckNameAcount {
     List<User> listUser= new FileWriteRead().readFile("src/w_database/users.dat");;
     public boolean checkNameAccount(String accountUser) {
         for (User account : listUser) {
-            boolean checkAccountUser = accountUser.equals(account.getStaffId());
+            boolean checkAccountUser = accountUser.equals(account.getUserId());
             if (checkAccountUser) {
                 return true;
             }

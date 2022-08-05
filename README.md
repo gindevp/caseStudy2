@@ -1,6 +1,6 @@
 # Student Manager
 ## Sơ lược 
-* Chương trình QLSV giúp người dùng quản lý thông tin sinh viên và điểm một cách dễ dàng, giao diện thân thiện.
+* Chương trình QLSV giúp người dùng quản lý thông tin sinh viên và điểm một cách dễ dàng, giao diện không thân thiện nên dùng java swing để nâng cấp UI.
 * Sản phẩm này lấy cảm hứng từ ứng dụng khác cũng là quản lý sinh viên nhưng nghiệp vụ và chức năng lớn hơn nhiều.
 * Đây chỉ là một sản phẩm đơn giản được viết trong vài ba ngày còn nhiều lỗi nói chung là dùng được.
 * Về việc lên kế hoạch sử dụng trello để quản lý thời gian, vẽ sơ đồ UML, đặc tả, flowchart, luồng thực thi...
