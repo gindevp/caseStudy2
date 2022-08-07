@@ -12,13 +12,13 @@ import java.util.Scanner;
 public class Login {
     Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        List<User> userList= new ArrayList<>();
-        userList.add(new User("01","123456","Quyết",true));
-        userList.add(new User("02","123456","ĐẠt",false));
-        userList.add(new User("03","123456","Huyền",false));
-        userList.add(new User("04","123456","Minh",false));
-        new FileWriteRead().writeFile(userList,"src/w_database/users.dat");
-        System.out.println(new FileWriteRead().readFile("src/w_database/users.dat"));
+//        List<User> userList= new ArrayList<>();
+//        userList.add(new User("01","123456","Quyết",true));
+//        userList.add(new User("02","123456","ĐẠt",false));
+//        userList.add(new User("03","123456","Huyền",false));
+//        userList.add(new User("04","123456","Minh",false));
+//        new FileWriteRead().writeFile(userList,"src/w_database/users.dat");
+//        System.out.println(new FileWriteRead().readFile("src/w_database/users.dat"));
         Login login = new Login();
         login.choiceLogin();
     }
